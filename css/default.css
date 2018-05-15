@@ -1,0 +1,29 @@
+body 
+{
+	background-color: #515151;
+}
+
+p 
+{
+	font-family: Segoe UI;
+	font-weight: lighter;
+	font-size: 25px;
+}
+
+h7 
+{
+	font-family: Segoe UI;
+	font-weight: lighter;
+	font-size: 50px;
+	color: lightgray;
+}
+
+.centered
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
