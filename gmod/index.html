@@ -12,21 +12,30 @@
 	<div id="particles-js"></div>
 	<div id="content" class="anim">
 		<div id="box" class="text" align="center">
-			<img alt="Bild nicht gefunden." src="img/keule_logo.png" width="420px" height="420px">
-			<p style="color:#ff3333">Trouble in Terrorist Town</p>
-			<p id="map"></p>
+			<img alt="Bild nicht gefunden." src="img/keule_logo.png" width="420px" height="420px"><br><br><hr>
+			<table>
+				<tr>
+					<td>Spielmodus: </td>
+					<td id="gamemode"></td>
+				</tr>
+				
+				<tr>
+					<td>Aktuelle Map: </td>
+					<td id="map"></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 
 	<script src="js/particles.js"></script>
 	<script src="js/app.js"></script>
 	<script>
-		function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language ) 
-		{
-			var mapNode = document.createElement("p");
-			var mapText = document.createTextNode(mapname);
-			mapNode.appendChild(mapText);
-			document.getElementById('box').appendChild(mapNode);
+		function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language )
+		{			
+			if(gamemode == "terrortown")
+				document.getElementById('gamemode') = "Trouble In Terrorist Town";
+			else
+				document.getElementById('gamemode') = gamemode;
 		}
 	</script>
 </html>

@@ -14,10 +14,16 @@ canvas
 	vertical-align:bottom;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, figcaption, a
+h1, h2, h3, h4, h5, h6, p, li, figcaption, a, td, tr
 {
-	color:#36a600;
+	color: #cdcdcd;
 	font-family:Consolas;
+}
+
+hr
+{
+	border: 0.1pt dashed gray;
+	border-radius: 3px;
 }
 
 .anim
