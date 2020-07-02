@@ -13,13 +13,8 @@
 	<div id="content" class="anim">
 		<div id="box" class="text" align="center">
 			<img alt="Bild nicht gefunden." src="img/keule_logo.png" width="420px" height="420px"><br><br><hr>
-			<table>
-				<tr>
-					<td>Spielmodus: </td>
-					<td id="gamemode"></td>
-				</tr>
-				
-				<tr>
+			<table>				
+				<tr id="map">
 					<td>Aktuelle Map: </td>
 					<td id="map"></td>
 				</tr>
@@ -31,11 +26,16 @@
 	<script src="js/app.js"></script>
 	<script>
 		function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language )
-		{			
-			if(gamemode == "terrortown")
-				document.getElementById('gamemode') = "Trouble In Terrorist Town";
-			else
-				document.getElementById('gamemode') = gamemode;
+		{
+			var element = document.createElement("td");
+			var textContent = document.createTextNode("Aktuelle Map: ");
+			element.appendChild(textContent);
+			document.getElementById("map").appendChild(element);
+			
+			var td2 = document.createElement("td");
+			var mapContent = document.createTextNode(mapname);
+			td2.appendChild(mapContent);
+			document.getElementById("map").appendChild(td2);
 		}
 	</script>
 </html>
